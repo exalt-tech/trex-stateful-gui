@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~
+  ~  * *****************************************************************************
+  ~  * Copyright (c) 2016
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *     http://www.apache.org/licenses/LICENSE-2.0
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  ******************************************************************************
+  ~
+  -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="250.0" prefWidth="350.0"
+            styleClass="aboutContainerWrapper" stylesheets="@../styles/AboutWindowStyle.css"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.exalttech.trex.stateful.controllers.AboutWindowViewController">
+    <children>
+        <AnchorPane layoutY="-32.0" prefHeight="200.0" prefWidth="200.0" styleClass="aboutContainer"
+                    AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+                    AnchorPane.topAnchor="15.0">
+            <children>
+                <ImageView fx:id="aboutIcon" fitHeight="120.0" fitWidth="86.0" layoutX="117.0" layoutY="14.0"
+                           pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="117.0"
+                           AnchorPane.topAnchor="10.0"/>
+                <Label layoutX="48.0" layoutY="138.0" text="TRex viewer Version" AnchorPane.leftAnchor="48.0"
+                       AnchorPane.topAnchor="138.0"/>
+                <Label fx:id="trexVersionLabel" layoutX="169.0" layoutY="139.0"/>
+            </children>
+        </AnchorPane>
+        <Button layoutX="224.0" layoutY="153.0" mnemonicParsing="false" onAction="#closeAboutWindow" prefWidth="80.0"
+                styleClass="buttonStyle" text="OK" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

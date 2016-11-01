@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~
+  ~  * *****************************************************************************
+  ~  * Copyright (c) 2016
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *     http://www.apache.org/licenses/LICENSE-2.0
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  ******************************************************************************
+  ~
+  -->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0"
+            style="-fx-background-color: #FFF;" styleClass="editCommandWindow"
+            stylesheets="@../styles/ControlWindowStyle.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.exalttech.trex.stateful.controllers.AppearanceSettingsViewController">
+    <children>
+        <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="30.0"
+                      prefHeight="30.0" style="-fx-background-color: #33B5E5;">
+                    <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Manage Widgets Appearance" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label style="-fx-font-weight: bold;" text="Manage what you want to see in dashboard">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets left="20.0"/>
+                    </VBox.margin>
+                </Label>
+                <CheckBox fx:id="globalCounterCheckBox" mnemonicParsing="false" text="Global counters">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <CheckBox fx:id="perPortCountersCheckBox" layoutX="10.0" layoutY="44.0" mnemonicParsing="false"
+                          text="Per Port Counters">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <CheckBox fx:id="perTemplateWindowCheckBox" layoutX="10.0" layoutY="61.0" mnemonicParsing="false"
+                          text="Per Template Window">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <CheckBox fx:id="latencyCheckBox" layoutX="10.0" layoutY="78.0" mnemonicParsing="false" text="Latency">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <CheckBox fx:id="rxHistogramCheckBox" layoutX="10.0" layoutY="95.0" mnemonicParsing="false"
+                          text="RX Histogram">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <CheckBox fx:id="latencyHistogramCheckBox" layoutX="10.0" layoutY="112.0" mnemonicParsing="false"
+                          text="Latency Histogram">
+                    <VBox.margin>
+                        <Insets left="30.0"/>
+                    </VBox.margin>
+                </CheckBox>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0"/>
+                    </VBox.margin>
+                </Separator>
+                <HBox prefHeight="30.0" spacing="10.0">
+                    <children>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="saveButton" defaultButton="true" mnemonicParsing="false"
+                                onAction="#saveAppearanceSettingsWindow" prefWidth="100.0"
+                                style="-fx-background-color: #33B5E5;" text="Save " textFill="WHITE">
+                            <HBox.margin>
+                                <Insets top="-10.0"/>
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false"
+                                onAction="#closeAppearanceSettingsWindow" prefWidth="100.0"
+                                style="-fx-background-color: #93DBF5;" text="Cancel" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets right="20.0" top="-10.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

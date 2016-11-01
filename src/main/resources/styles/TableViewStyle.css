@@ -1,0 +1,124 @@
+/*
+ *
+ *  * *****************************************************************************
+ *  * Copyright (c) 2016
+ *  *
+ *  * Licensed under the Apache License, Version 2.0 (the "License");
+ *  * you may not use this file except in compliance with the License.
+ *  * You may obtain a copy of the License at
+ *  *     http://www.apache.org/licenses/LICENSE-2.0
+ *  * Unless required by applicable law or agreed to in writing, software
+ *  * distributed under the License is distributed on an "AS IS" BASIS,
+ *  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  * See the License for the specific language governing permissions and
+ *  * limitations under the License.
+ *  ******************************************************************************
+ *
+ */
+
+.tableContainer {
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: #000000;*/
+    /*-fx-border-width: 1px;*/
+}
+
+.table-view {
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .table-row-cell {
+    -fx-border-width: 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #33B5E5;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 5;
+    -fx-border-color: #A6A6A6 transparent #A6A6A6 #A6A6A6;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+
+.table-view, .table-view:focused {
+    -fx-background-color: transparent, transparent, transparent;
+    -fx-background-insets: -1.4, 0, 1;
+
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-insets: 0;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent transparent #A6A6A6 #A6A6A6;
+    -fx-border-insets: 0;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 5;
+}
+
+.table-view .table-cell:last-visible {
+    -fx-border-color: transparent #A6A6A6 #A6A6A6 #A6A6A6;
+    -fx-border-insets: 0, 0, 0, 0;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-color: #A6A6A6 #A6A6A6 #A6A6A6 #A6A6A6;
+    -fx-border-insets: 0, 0, 0, 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #DBEEF4;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0096C9;
+}
+
+.table-view .table-row-cell:empty,
+.table-view .table-cell:empty {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+/*.table-view *.scroll-bar:vertical *.increment-button,
+.table-view *.scroll-bar:vertical *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}*/
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+#alignedColumn {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 0 20 0 5;
+}

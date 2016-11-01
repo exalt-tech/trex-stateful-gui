@@ -1,0 +1,160 @@
+/*
+ *
+ *  * *****************************************************************************
+ *  * Copyright (c) 2016
+ *  *
+ *  * Licensed under the Apache License, Version 2.0 (the "License");
+ *  * you may not use this file except in compliance with the License.
+ *  * You may obtain a copy of the License at
+ *  *     http://www.apache.org/licenses/LICENSE-2.0
+ *  * Unless required by applicable law or agreed to in writing, software
+ *  * distributed under the License is distributed on an "AS IS" BASIS,
+ *  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  * See the License for the specific language governing permissions and
+ *  * limitations under the License.
+ *  ******************************************************************************
+ *
+ */
+
+.chart-legend {
+    /*-fx-translate-y: -180;*/
+    /*-fx-translate-x: 200;*/
+}
+
+.consoleLogsContainer {
+    text-area-background: black;
+    -fx-text-fill: white;
+}
+
+.consoleLogsContainer .content {
+    -fx-background-color: text-area-background;
+}
+
+.consoleLogsContainer:focused .content {
+    -fx-background-color: black;
+}
+
+.buttonStyle {
+    -fx-background-color: #33B5E5;
+    -fx-border-radius: 0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 300;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+}
+
+.split-pane {
+    -fx-box-border: transparent;
+}
+
+.settingsIcon {
+    -fx-background-image: url("/images/settings_blue_normal.png");
+}
+
+.settingsIcon:hover {
+    -fx-background-image: url("/images/settings_blue_hover.png");
+}
+
+.settingsIcon:disabled {
+    -fx-background-image: url("/images/settings_blue_disabled.png");
+}
+
+.settingsIcon:pressed {
+    -fx-background-image: url("/images/settings_blue_selected.png");
+}
+
+.connectIcon {
+    -fx-background-image: url("/images/connect_normal.png");
+}
+
+.connectIcon:hover {
+    -fx-background-image: url("/images/connect_hover.png");
+}
+
+.connectIcon:disabled {
+    -fx-background-image: url("/images/connect_disabled.png");
+}
+
+.connectIcon:pressed {
+    -fx-background-image: url("/images/connect_selected.png");
+}
+
+.disconnectIcon {
+    -fx-background-image: url("/images/disconnected_normal.png");
+}
+
+.disconnectIcon:hover {
+    -fx-background-image: url("/images/disconnected_hover.png");
+}
+
+.disconnectIcon:disabled {
+    -fx-background-image: url("/images/disconnected_disabled.png");
+}
+
+.disconnectIcon:pressed {
+    -fx-background-image: url("/images/disconnected_selected.png");
+}
+
+.playIcon {
+    -fx-background-image: url("/images/play_normal.png");
+}
+
+.playIcon:hover {
+    -fx-background-image: url("/images/play_hover.png");
+}
+
+.playIcon:disabled {
+    -fx-background-image: url("/images/play_disabled.png");
+}
+
+.playIcon:pressed {
+    -fx-background-image: url("/images/play_selected.png");
+}
+
+.stopIcon {
+    -fx-background-image: url("/images/stop_normal.png");
+}
+
+.stopIcon:hover {
+    -fx-background-image: url("/images/stop_hover.png");
+}
+
+.stopIcon:disabled {
+    -fx-background-image: url("/images/stop_disabled.png");
+}
+
+.stopIcon:pressed {
+    -fx-background-image: url("/images/stop_selected.png");
+}
+
+.restartIcon {
+    -fx-background-image: url("/images/restart_normal.png");
+}
+
+.restartIcon:hover {
+    -fx-background-image: url("/images/restart_hover.png");
+}
+
+.restartIcon:disabled {
+    -fx-background-image: url("/images/restart_disabled.png");
+}
+
+.restartIcon:pressed {
+    -fx-background-image: url("/images/restart_selected.png");
+}
+
+.context-menu {
+    -fx-background-color: #F7F7F7;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: #AFAFAF;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~
+  ~  * *****************************************************************************
+  ~  * Copyright (c) 2016
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *     http://www.apache.org/licenses/LICENSE-2.0
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  ******************************************************************************
+  ~
+  -->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" maxHeight="1.7976931348623157E308"
+      maxWidth="1.7976931348623157E308"
+      prefHeight="100.0" prefWidth="440.0" style="-fx-background-color: #FFFFFF;" visible="false"
+      xmlns="http://javafx.com/javafx/8"
+      fx:controller="com.exalttech.trex.stateful.controllers.GlobalCounterDashboardController">
+    <children>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <children>
+                <Pane fx:id="gaugeContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0"
+                      prefWidth="200.0" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Pane>
+                <Pane prefHeight="100.0" prefWidth="200.0" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                    <children>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0"
+                              prefWidth="200.0">
+                            <children>
+                                <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label fx:id="firstValueTotalTXLabel" alignment="BOTTOM_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="secondValueTotalTXLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="16.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="0.0">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="30.0" top="30.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                      HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Total" VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets left="5.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="TX" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets left="10.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets top="30.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <children>
+                <Pane fx:id="CPSContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="170.0"
+                      prefWidth="200.0" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                    <children>
+                        <HBox prefHeight="160.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="160.0" prefWidth="130.0">
+                                    <children>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Expected" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="expectedBPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Measured" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="measuredBPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="\%% Expected"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="percentExpectedBPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="160.0">
+                                    <padding>
+                                        <Insets bottom="60.0" top="60.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox maxHeight="-Infinity" prefHeight="160.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" text="BPS" VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets top="70.0"/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+                <Pane fx:id="flowsContainer" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                    <children>
+                        <HBox prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="160.0" prefWidth="130.0">
+                                    <children>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Expected" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="expectedPPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Measured" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="measuredPPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="\%% Expected"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="percentExpectedPPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="160.0">
+                                    <padding>
+                                        <Insets bottom="60.0" top="60.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox prefHeight="160.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" text="PPS" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets top="70.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <children>
+                <Pane fx:id="CPSContainer1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="160.0"
+                      prefWidth="200.0" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox prefHeight="160.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="160.0" prefWidth="130.0">
+                                    <children>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Expected" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="expectedCPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Measured" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="measuredCPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="\%% Expected"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="percentExpectedCPSLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="160.0">
+                                    <padding>
+                                        <Insets bottom="60.0" top="60.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox prefHeight="160.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" text="CPS" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets top="70.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Pane>
+                <Pane fx:id="flowsContainer1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      styleClass="dashboardElement" stylesheets="@../styles/GlobalCounterDashboardStyle.css"
+                      HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox prefHeight="160.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="160.0" prefWidth="130.0">
+                                    <children>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Active flows"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="activeflowsFieldLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Active flows"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="activeFlowsLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Open flows" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="openFlowsLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets left="20.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL" prefHeight="160.0">
+                                    <padding>
+                                        <Insets bottom="60.0" top="60.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox prefHeight="160.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" text="Flows" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets top="70.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Pane>
+            </children>
+        </HBox>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <children>
+                <Pane fx:id="RXContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      minHeight="50.0" styleClass="dashboardElement"
+                      stylesheets="@../styles/GlobalCounterDashboardStyle.css" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </HBox.margin>
+                    <children>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0">
+                            <children>
+                                <VBox prefWidth="175.0">
+                                    <children>
+                                        <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308"
+                                               maxWidth="1.7976931348623157E308" text="Total drop" VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets left="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="totalDropRXLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets left="20.0"/>
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="10.0" layoutY="10.0" prefWidth="175.0">
+                                    <children>
+                                        <Label fx:id="totalRxBpsLabel" alignment="BOTTOM_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets left="20.0"/>
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="40.0"/>
+                                            </padding>
+                                        </Label>
+                                        <Label fx:id="totalRxPpsLabel" alignment="TOP_LEFT"
+                                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                               VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font name="System Bold" size="14.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="20.0"/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets left="40.0"/>
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator orientation="VERTICAL">
+                                    <padding>
+                                        <Insets bottom="10.0" top="10.0"/>
+                                    </padding>
+                                </Separator>
+                                <VBox>
+                                    <children>
+                                        <Label contentDisplay="CENTER" text="Total RX" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font size="14.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0"/>
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets top="15.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+    </children>
+</VBox>

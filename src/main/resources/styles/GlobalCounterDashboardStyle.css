@@ -1,0 +1,97 @@
+/*
+ *
+ *  * *****************************************************************************
+ *  * Copyright (c) 2016
+ *  *
+ *  * Licensed under the Apache License, Version 2.0 (the "License");
+ *  * you may not use this file except in compliance with the License.
+ *  * You may obtain a copy of the License at
+ *  *     http://www.apache.org/licenses/LICENSE-2.0
+ *  * Unless required by applicable law or agreed to in writing, software
+ *  * distributed under the License is distributed on an "AS IS" BASIS,
+ *  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  * See the License for the specific language governing permissions and
+ *  * limitations under the License.
+ *  ******************************************************************************
+ *
+ */
+
+.dashboardElement {
+    -fx-border-color: #A6A6A6;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+}
+
+.colorscheme-green-to-grey-2 {
+    -fxx-segment0-color: #29bf4c;
+    -fxx-segment1-color: cfcfcf;
+}
+
+.colorscheme-red-to-grey-2 {
+    -fxx-segment0-color: #ea2323;
+    -fxx-segment1-color: #cfcfcf;
+}
+
+#cpuIndicator {
+    -fxx-animated: YES;
+    -fxx-value-format: ' ##0.0%';
+}
+
+.SimpleMetroArcGauge {
+    -fxx-needle-color: F1F2F1;
+}
+
+.SimpleMetroArcGauge .needle {
+    -fx-fill: -fxx-needle-color;
+    -fx-stroke: #c7c7c7;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: bevel;
+    -fx-stroke-width: 1;
+}
+
+.SimpleMetroArcGauge .value {
+    -fx-fill: #8a8a8a;
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+}
+
+.gaugeTitle {
+    -fx-font-weight: bold;
+    -fx-text-fill: #8a8a8a;
+    -fx-font-size: 8pt;
+}
+
+.gridPaneCells {
+    -fx-border-width: 1 0 0 1;
+    -fx-border-color: #A6A6A6;
+}
+
+.gridPaneCellsLastColumn {
+    -fx-border-width: 1 1 0 1;
+    -fx-border-color: #A6A6A6;
+}
+
+.gridPaneCellsLastRow {
+    -fx-border-width: 1 0 1 1;
+    -fx-border-color: #A6A6A6;
+}
+
+.gridPaneCellsCornerCell {
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #A6A6A6;
+}
+
+#columnHeaderItem {
+    -fx-font-size: 12;
+    -fx-text-fill: white;
+    -fx-background-color: #33B5E5;
+    -fx-font-weight: bold;
+}
+
+.dashBoardLabels {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #404040;
+}
+
